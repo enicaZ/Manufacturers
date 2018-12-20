@@ -1,10 +1,10 @@
 <?php
 
-namespace Denngarr\Seat\Fitting;
+namespace Enicaz\Seat\Manufacturers;
 
 use Illuminate\Support\ServiceProvider;
 
-class FittingServiceProvider extends ServiceProvider
+class ManufacturersServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -33,7 +33,7 @@ class FittingServiceProvider extends ServiceProvider
 
     public function add_translations()
     {
-        $this->loadTranslationsFrom(__DIR__ . '/lang', 'fitting');
+        $this->loadTranslationsFrom(__DIR__ . '/lang', 'manufacturers');
     }
 
     /**
@@ -41,7 +41,7 @@ class FittingServiceProvider extends ServiceProvider
      */
     public function add_views()
     {
-        $this->loadViewsFrom(__DIR__ . '/resources/views', 'fitting');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'manufacturers');
     }
 
     /**
@@ -52,15 +52,15 @@ class FittingServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/Config/fitting.config.php', 'fitting.config');
+            __DIR__ . '/Config/manufacturers.config.php', 'manufacturers.config');
 
         $this->mergeConfigFrom(
-            __DIR__ . '/Config/fitting.sidebar.php',
+            __DIR__ . '/Config/manufacturers.sidebar.php',
             'package.sidebar'
         );
 
         $this->mergeConfigFrom(
-            __DIR__ . '/Config/fitting.permissions.php', 'web.permissions');
+            __DIR__ . '/Config/manufacturers.permissions.php', 'web.permissions');
     }
 
     public function add_publications()
