@@ -1,0 +1,30 @@
+{
+    "name": "enicaz/seat-manufacturers",
+    "description": "关于SeAT的制造插件",
+    "type": "seat-plugin",
+    "license": "GPL-2.0-only",
+    "authors": [
+        {
+            "name": "Enica Zhong",
+            "email": "enicaz@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Enicaz\\Seat\\manufacturers\\": "src/"
+        }
+    },
+     "extra": {
+        "laravel": {
+            "providers": [
+                "Enicaz\\Seat\\manufacturers\\FittingServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "eveseat/services": "^3.0",
+        "eveseat/eveapi": "^3.0",
+        "eveseat/web": "^3.0"
+    }
+}
