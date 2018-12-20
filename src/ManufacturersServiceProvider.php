@@ -56,6 +56,9 @@ class ManufacturersServiceProvider extends ServiceProvider
 
         $this->mergeConfigFrom(
             __DIR__ . '/Config/manufacturers.sidebar.php', 'package.sidebar');
+        
+        $this->mergeConfigFrom(
+            __DIR__ . '/Config/manufacturers.corporation.menu.php', 'manufacturers.corporation.menu');
 
         $this->mergeConfigFrom(
             __DIR__ . '/Config/manufacturers.permissions.php', 'web.permissions');
