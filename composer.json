@@ -12,13 +12,13 @@
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "Enicaz\\Seat\\manufacturers\\": "src/"
+            "Enicaz\\Seat\\Manufacturers\\": "src/"
         }
     },
      "extra": {
         "laravel": {
             "providers": [
-                "Enicaz\\Seat\\manufacturers\\FittingServiceProvider"
+                "Enicaz\\Seat\\Manufacturers\\ManufacturersServiceProvider"
             ]
         }
     },
